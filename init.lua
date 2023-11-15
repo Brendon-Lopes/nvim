@@ -44,6 +44,8 @@ P.S. You can delete this when you're done too. It's your config now :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+require 'custom.config'
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -156,9 +158,6 @@ require('lazy').setup({
     -- Theme inspired by Atom
     'navarasu/onedark.nvim',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
   },
 
   {
@@ -229,7 +228,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
@@ -601,6 +600,14 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+-- Colorscheme
+-- vim.cmd.colorscheme 'tokyonight'
+-- vim.cmd.colorscheme 'kanagawa-wave'
+-- vim.cmd.colorscheme 'OceanicNext'
+-- vim.cmd.colorscheme 'duskfox'
+vim.cmd.colorscheme 'nightfox'
+-- vim.cmd.colorscheme 'gruvbox-material'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
