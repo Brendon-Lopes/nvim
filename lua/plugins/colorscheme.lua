@@ -16,7 +16,7 @@ return {
     "rebelot/kanagawa.nvim",
     config = function()
       require("kanagawa").setup({
-        transparent = true,
+        -- transparent = true,
         keywordStyle = { italic = true },
         statementStyle = { bold = true },
         commentStyle = { italic = true },
@@ -41,7 +41,7 @@ return {
           transparent = true,
           dim_inactive = false,
           styles = {
-            comments = "italic", -- <-- not working
+            comments = "italic",
           },
         },
       })
@@ -54,6 +54,20 @@ return {
       vim.g.gruvbox_material_foreground = "material" -- material, mix, original
       vim.g.gruvbox_material_enable_italic = 1
       vim.g.gruvbox_material_transparent_background = 1
+    end,
+  },
+  {
+    "rose-pine/neovim",
+    as = "rose-pine",
+    config = function()
+      require("rose-pine").setup({
+        variant = "moon",
+        bold_vert_split = false,
+        dim_nc_background = true,
+        disable_background = false,
+        disable_float_background = false,
+        disable_italics = false,
+      })
     end,
   },
 }

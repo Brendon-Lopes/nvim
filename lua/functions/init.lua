@@ -17,6 +17,9 @@ function M.live_grep_from_project_git_root()
   if is_git_repo() then
     opts = {
       cwd = get_git_root(),
+      hidden = true,
+      file_ignore_patterns = { "node_modules", ".git" },
+      no_ignore = true,
     }
   end
 
@@ -39,6 +42,9 @@ function M.find_files_from_project_git_root()
   if is_git_repo() then
     opts = {
       cwd = get_git_root(),
+      hidden = true,
+      file_ignore_patterns = { "node_modules", ".git" },
+      no_ignore = true,
     }
   end
 
